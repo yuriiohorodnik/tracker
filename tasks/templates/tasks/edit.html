@@ -1,0 +1,42 @@
+{% extends 'tasks/base.html' %}
+
+{% block title %}Edit task{% endblock %}
+
+{% block right_header_part %}
+<div class="col-3 d-flex justify-content-center align-items-center">
+    <h4 class="mr-4 mt-2" style="color: white">Yurii Ohorodnik</h4>
+</div>
+{% endblock %}
+{% block content %}
+<section>
+    <div class="container">
+        <div class="row justify-content-md-center d-flex align-items-md-center">
+            <div class="col-6 d-flex justify-content-center">
+            <form>
+                <h1 class="display-3 mb-4 text-center">Edit</h1>
+                <div class="form-group">
+                    <label for="exampleInputName1">Project name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputDescription1">Description</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="form-group">
+                    <!-- TODO DROPDOWN LIST -->
+                </div>
+                <div class="form-group">
+                    <ul>
+                        <li>Yurii Ohorodnik</li>
+                        <li>Alan Turing</li>
+                        <li>Angela Basset</li>
+                        <li>Mira Valchevs'ka</li>
+                    </ul>
+                </div>
+                <button type="submit" class="btn btn-success">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

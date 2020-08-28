@@ -1,0 +1,40 @@
+{% extends 'tasks/base.html' %}
+
+{% block title %}Welcome to time-tracker!{% endblock %}
+
+{% block right_header_part %}
+<div class="col-2 d-flex justify-content-center align-items-center">
+    <button class="btn btn-success">Sign up</button>
+</div>
+{% endblock %}
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="row justify-content-md-between d-flex align-items-md-center">
+                <div class="col-6">
+                    <h3 class="display-3">
+                        Make your projects better with professional time-tracking tools
+                    </h3>
+                </div>
+                <div class="col-6 d-flex justify-content-center">
+                    <form method="POST", action="/">
+                        {% csrf_token %}
+                        <div class="form-group">
+                          <label for="email">Email address</label>
+                          <input type="email" name="email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label for="password_field">Password</label>
+                          <input type="password" class="form-control" name="password_field">
+                        </div>
+                            
+                        {% if login_error %}
+                            <label class="error">{{ login_error }}</label><br>
+                        {% endif %}
+                        <button type="submit" class="btn btn-success">Log in</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
